@@ -3,6 +3,8 @@
     grid-template-columns: repeat(3, 90px);
 }
 input {
+    display: grid;
+    grid-template-columns: repeat(1);
     width: 360px;
     height: 90px;
     margin-bottom: 10px;

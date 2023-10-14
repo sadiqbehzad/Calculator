@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="input">
+      <input id="display" type="button" disabled />
+    </section>
+    <section>
+      <button id="seven" onclick="appendOp(7)">7</button>
+      <button id="eight" onclick="appendOp(8)">8</button>
+      <button id="nine" onclick="appendOp(9)">9</button>
+      <button id="four" onclick="appendOp(4)">4</button>
+      <button id="five" onclick="appendOp(5)">5</button>
+      <button id="six" onclick="appendOp(6)">6</button>
+      <button id="one" onclick="appendOp(1)">1</button>
+      <button id="two" onclick="appendOp(2)">2</button>
+      <button id="three" onclick="appendOp(3)">3</button>
+      <button id="negate" onclick="appendOp('-')">±</button>
+      <button id="zero" onclick="appendOp(0)">0</button>
+      <button id="decimalPoint" onclick="appendOp('.')">•</button>
+    </section>
+    <div>
+      <button id="division" operation="÷" onclick="sign('division')">÷</button>
+      <button
+        id="multiplication"
+        operation="×"
+        onclick="sign('multiplication')"
+      >
+        ×
+      </button>
+      <button id="sub" operation="-" onclick="sign('sub')">-</button>
+      <button id="add" operation="+" onclick="sign('add')">+</button>
+      <button id="clear" onclick="clearScreen()">C</button>
+      <button id="equal" onclick="equal()">=</button>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

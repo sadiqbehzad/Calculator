@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Oxygen:wght@700&family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <section class="input">
       <input id="display" type="button" disabled />
     </section>
-    <section>
+    <section class="first">
+      <button id="percent" onclick="appendOp('%')">%</button>
+      <button id="sqrRoot" onclick="appendOp('√')">√</button>
+      <button id="clear" onclick="clearScreen()">C</button>
       <button id="seven" onclick="appendOp(7)">7</button>
       <button id="eight" onclick="appendOp(8)">8</button>
       <button id="nine" onclick="appendOp(9)">9</button>
@@ -24,7 +33,7 @@
       <button id="zero" onclick="appendOp(0)">0</button>
       <button id="decimalPoint" onclick="appendOp('.')">•</button>
     </section>
-    <div>
+    <section class="operators">
       <button id="division" operation="÷" onclick="sign('division')">÷</button>
       <button
         id="multiplication"
@@ -35,9 +44,8 @@
       </button>
       <button id="sub" operation="-" onclick="sign('sub')">-</button>
       <button id="add" operation="+" onclick="sign('add')">+</button>
-      <button id="clear" onclick="clearScreen()">C</button>
-      <button id="equal" onclick="equal()">=</button>
-    </div>
+      <button class="equalButton" id="equal" onclick="equal()">=</button>
+    </section>
   </body>
   <script src="index.js"></script>
 </html>

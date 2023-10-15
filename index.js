@@ -1,10 +1,17 @@
 let result = 0;
 let operation = "";
-let displayWindow = 0;
+let displayWindow = "";
 let temp = [];
 
 function appendOp(num) {
   displayWindow = displayWindow + num;
+  display1.value = displayWindow;
+}
+
+function sqrRt(num) {
+  display2.value = Math.sqrt(Number(displayWindow));
+  console.log(display2.value);
+  displayWindow = num + displayWindow;
   display1.value = displayWindow;
 }
 
@@ -40,7 +47,12 @@ function equal() {
   }
   console.log(result);
   display1.value = displayWindow;
-  display2.value = Number(result);
+  if (result > 999999999999) {
+    display2.value = parseFloat(result).toExponential("10");
+  } else {
+    display2.value = result;
+  }
+
   temp = [];
   displayWindow = "";
 }

@@ -13,13 +13,12 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <section class="input">
-      <input maxlength="9" id="display1" type="button" disabled />
-      <input maxlength="9" id="display2" value="0" type="button" disabled />
-    </section>
+    <input class="input1" id="display1" type="button" disabled />
+    <input class="input2" id="display2" value="0" type="button" disabled />
+
     <section class="first">
       <button id="percent" onclick="appendOp('%')">%</button>
-      <button id="sqrRoot" onclick="appendOp('√')">√</button>
+      <button id="sqrRoot" onclick="sqrRt('√')">√</button>
       <button id="clear" onclick="clearScreen()">C</button>
       <button id="seven" onclick="appendOp(7)">7</button>
       <button id="eight" onclick="appendOp(8)">8</button>

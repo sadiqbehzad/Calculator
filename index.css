@@ -18,6 +18,7 @@
     color: black;
     text-align: right;
     padding: 0px;
+    
 }
 .input2 {
     display: grid;
@@ -32,10 +33,11 @@
     border-radius: 0px 0px 3px 3px;
     border-color: rgb(13, 22, 46);
     border-top: 0px;
-    background-color: white;
+    background-color:white;
     color: black;
     text-align: right;
     padding: 0px;
+
 }
 .operators{
     display: grid;
@@ -53,12 +55,15 @@ button {
     border-style: dotted;
     border-width: 0.1px;
     font-family: 'Anonymous Pro', monospace;
+    touch-action: manipulation;
 }
 button:hover {
     background-color: rgb(2, 81, 55);
+    
 }
 .equalButton{
     width: 90px;
     height: 50px;
     font-size:x-large;
 }
+

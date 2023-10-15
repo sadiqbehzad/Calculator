@@ -17,7 +17,7 @@
     <input class="input2" id="display2" value="0" type="button" disabled />
 
     <section class="first">
-      <button id="percent" onclick="appendOp('%')">%</button>
+      <button id="percent" operation="%" onclick="percentage()">%</button>
       <button id="sqrRoot" onclick="sqrRt('√')">√</button>
       <button id="clear" onclick="clearScreen()">C</button>
       <button id="seven" onclick="appendOp(7)">7</button>
@@ -31,7 +31,7 @@
       <button id="three" onclick="appendOp(3)">3</button>
       <button id="negate" onclick="appendOp('-')">±</button>
       <button id="zero" onclick="appendOp(0)">0</button>
-      <button id="decimalPoint" onclick="appendOp('.')">•</button>
+      <button id="decimalPoint" onclick="appendOp('.')">.</button>
     </section>
     <section class="operators">
       <button id="division" operation="÷" onclick="sign('division')">÷</button>

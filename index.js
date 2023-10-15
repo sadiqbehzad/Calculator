@@ -11,12 +11,12 @@ function appendOp(num) {
 function sqrRt(num) {
   result = Number(displayWindow);
   if (result < 0) {
-    display2.value = "Error";
-    alert("Enter positive number!");
-  } else {
+    display2.value = "Imaginary number";
+  } else if (!Number.isInteger(Math.sqrt(result))) {
     display2.value = parseFloat(Math.sqrt(result)).toFixed("12");
+  } else {
+    display2.value = Math.sqrt(result);
   }
-
   console.log(display2.value);
   displayWindow = num + displayWindow;
   display1.value = displayWindow;
@@ -26,17 +26,17 @@ function sqrRt(num) {
 
 function percentage() {
   temp.push(Number(displayWindow));
-  console.log(temp);
   result = temp[0] * temp[2] * 0.01;
   display2.value = result;
-  display1.value = displayWindow;
   displayWindow = "";
   temp = [];
 }
 
 function sign(id) {
-  console.log(displayWindow);
   temp.push(Number(displayWindow));
+
+  console.log(temp);
+
   operation = document.getElementById(id).getAttribute("operation");
   if (operation === "%") {
     temp.push("×");
@@ -45,20 +45,19 @@ function sign(id) {
     temp.push(operation);
   }
 
-  display1.value = displayWindow;
   displayWindow = "";
   console.log(temp);
 }
 
 function equal() {
   temp.push(Number(displayWindow));
+  temp.push(document.getElementById("equal").getAttribute("operation"));
   console.log(temp);
   result = temp[0];
 
   for (i = 1; i < temp.length; i += 2) {
     let signOp = temp[i];
     let numOp = temp[i + 1];
-    console.log(numOp);
 
     if (signOp === "+") {
       result += numOp;
@@ -71,7 +70,6 @@ function equal() {
     }
   }
   console.log(result);
-  display1.value = displayWindow;
   if (result > 999999999999) {
     display2.value = parseFloat(result).toExponential("10");
   } else if (!Number.isInteger(result)) {
@@ -79,7 +77,12 @@ function equal() {
   } else {
     display2.value = result;
   }
-
+  console.log(temp);
+  console.log(display1.value);
+  display1.value = "";
+  for (i = 0; i < temp.length; i++) {
+    display1.value += temp[i];
+  }
   temp = [];
   displayWindow = "";
 }
